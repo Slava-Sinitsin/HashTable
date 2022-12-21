@@ -23,6 +23,8 @@ public:
 
     [[nodiscard]] int getCapacity() const;
 
+    int getNodeCounter() const;
+
     bool isEmpty();
 
     bool clear();
@@ -94,10 +96,6 @@ private:
     int capacity{};
     int busyCount{};
     int nodeCounter;
-public:
-    int getNodeCounter() const;
-
-private:
     OANode<T> **nodeArr;
 
     [[nodiscard]] bool isDeleted(int j) const;
